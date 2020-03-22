@@ -1,0 +1,5 @@
+<button (click)="createTodo()">Add Todo</button>
+
+<ul>
+  <li *ngFor="let item of todos"><input type="checkbox" (input)="checkTodo(item.id, $event)"  [checked]="item.checked"/>{{item.name}} - {{item.description}}</li>
+</ul>
